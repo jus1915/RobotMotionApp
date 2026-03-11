@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotMotionApp", "RobotMotionApp\RobotMotionApp.csproj", "{792E552C-E095-42DB-A9E8-CB5ADA597BC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Debug|x64.ActiveCfg = Debug|x64
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Debug|x64.Build.0 = Debug|x64
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Release|x64.ActiveCfg = Release|x64
+		{792E552C-E095-42DB-A9E8-CB5ADA597BC8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47CA3DF6-EBA3-46DF-B634-1B9FE9A1D5F6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+bin/
+obj/
+x64/
+x86/
+
+# AXL DLL (실제 PC에서 별도 설치)
+AXL.dll
+AXL.lib
+EzBasicAxl.dll
+
+# NuGet
+packages/
+*.nupkg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
