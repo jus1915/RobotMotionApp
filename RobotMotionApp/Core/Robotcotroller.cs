@@ -75,6 +75,13 @@ namespace RobotMotionApp.Core
         [DllImport(DLL, CallingConvention = CallingConvention.Cdecl)]
         private static extern uint AxmMotGetProfileMode(int lAxisNo, ref uint dwpProfileMode);
 
+        // AxmMotSetMoveUnitPerPulse(long lAxisNo, double dUnit, long lPulse)
+        [DllImport(DLL, CallingConvention = CallingConvention.Cdecl)]
+        private static extern uint AxmMotSetMoveUnitPerPulse(int lAxisNo, double dUnit, int lPulse);
+
+        [DllImport(DLL, CallingConvention = CallingConvention.Cdecl)]
+        private static extern uint AxmMotGetMoveUnitPerPulse(int lAxisNo, ref double dpUnit, ref int lpPulse);
+
         // ── 이동 ───────────────────────────────────────────────────
         // 비동기 이동 (즉시 반환)
         [DllImport(DLL, CallingConvention = CallingConvention.Cdecl)]
@@ -214,6 +221,34 @@ namespace RobotMotionApp.Core
         {
             Check();
             AxmMotSetProfileMode(axisNo, mode);
+        }
+
+        /// <summary>Unit Per Pulse 설정 — unit=20, pulse=8388608</summary>
+        public void SetMoveUnitPerPulse(int axisNo, double unit, int pulse)
+        {
+            Check();
+            uint ret = AxmMotSetMoveUnitPerPulse(axisNo, unit, pulse);
+            if (ret != AXT_RT_SUCCESS)
+                throw new RobotException(string.Format(
+                    "SetMoveUnitPerPulse 실패 axis={0} (0x{1:X})", axisNo, ret));
+        }
+
+        /// <summary>Unit Per Pulse 읽기</summary>
+        public void GetMoveUnitPerPulse(int axisNo, out double unit, out int pulse)
+        {
+            Check();
+            double u = 0; int p = 0;
+            AxmMotGetMoveUnitPerPulse(axisNo, ref u, ref p);
+            unit = u; pulse = p;
+        }
+
+        /// <summary>MaxVel 읽기</summary>
+        public double GetMaxVel(int axisNo)
+        {
+            Check();
+            double v = 0;
+            AxmMotGetMaxVel(axisNo, ref v);
+            return v;
         }
 
         // ── 이동 ───────────────────────────────────────────────────
